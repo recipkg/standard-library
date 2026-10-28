@@ -14,7 +14,7 @@
 
 | 分类 | 配方 | 上游观察来源 | 状态 |
 | --- | --- | --- | --- |
-| 命令行 / 多媒体 | [ffmpeg](https://github.com/recipkg/ffmpeg) | [FFmpeg 9.0.2](https://github.com/FFmpeg/FFmpeg/tree/n9.0.2) | **提取中**：已实测多音轨、映射、流复制，以及音频混合、分支和过滤图错误；库、格式、工具等大量行为未完成。 |
+| 命令行 / 多媒体 | [ffmpeg](https://github.com/recipkg/ffmpeg) | [FFmpeg 9.0.2](https://github.com/FFmpeg/FFmpeg/tree/n9.0.2) | **提取中**：已实测多音轨、映射、音频过滤，以及部分视频裁剪、缩放、帧率和无损转码；库、格式、工具等大量行为未完成。 |
 | 命令行 / JSON 处理 | [jq](https://github.com/recipkg/jq) | [jq 1.8.2](https://github.com/jqlang/jq/tree/34f7186b86743a083a589741b6cea95293524108) | **提取中**：部分过滤、绑定、函数、归约、JSON 解析和输入输出已对照本机；完整语言及重建未验收。 |
 | 命令行 / 文本搜索 | [ripgrep](https://github.com/recipkg/ripgrep) | [ripgrep 15.2.0](https://github.com/BurntSushi/ripgrep/tree/e89fff89ac9af12e8d4ce9d5fd07beb408ca730f) | **提取中**：本机对照忽略规则、glob、标准输入及 JSON 字节偏移，接入正则配方；完整行为及重建未验收。 |
 | 基础能力 / 正则引擎 | [regex](https://github.com/recipkg/regex) | [rust-lang/regex 1.13.0](https://github.com/rust-lang/regex/tree/926af2e68eca3ce089815790541cf50759ba2c59) | **提取中**：上游库适配器验证少量字符串及字节匹配、Unicode 与错误；完整字节行为、语法和重建未完成。 |
