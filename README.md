@@ -7,6 +7,7 @@
 | 分类 | 配方 | 上游观察来源 | 状态 |
 | --- | --- | --- | --- |
 | 命令行 / 多媒体 | [ffmpeg](https://github.com/recipkg/ffmpeg) | [FFmpeg 9.0.2](https://github.com/FFmpeg/FFmpeg/tree/n9.0.2) | **提取中**：仅初步覆盖 CLI 核心，库、格式、工具等大量行为未完成。 |
+| 通讯与社交 | [zulip](https://github.com/recipkg/zulip) | [Zulip 指定源码提交](https://github.com/zulip/zulip/tree/dd5adc2de6c43bd7bac7d1a0e6dc18c9364268a7) | **提取中**：初步整理频道、主题和消息；权限、同步和实际客户端未完成验收。 |
 | 内容与知识 | [miniflux](https://github.com/recipkg/miniflux) | [Miniflux 指定源码提交](https://github.com/miniflux/v2/tree/3945f3daa0a90040f761d79a5f62a678fe86ba4e) | **提取中**：源解析器测试通过；Web、数据库、API 等尚未实际运行或完整提炼。 |
 | 协作与办公 | [vikunja](https://github.com/recipkg/vikunja) | [Vikunja 指定源码提交](https://github.com/go-vikunja/vikunja/tree/e37ebc0d10db366ff111bc4bb74a696d7cfc912e) | **提取中**：初步整理任务和视图；UI、接口、权限和持久化未完成验证。 |
 | 设计方法 / 质量合同 | [design-foundations](https://github.com/recipkg/design-foundations) | Apple、Microsoft、Android、IBM、GOV.UK、W3C 官方指南，详见配方来源 | **首版可用**：归档与依赖交付已检查；具体产品须独立验收。 |
