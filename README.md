@@ -15,7 +15,7 @@
 | 分类 | 配方 | 上游观察来源 | 状态 |
 | --- | --- | --- | --- |
 | 命令行 / 多媒体 | [ffmpeg](https://github.com/recipkg/ffmpeg) | [FFmpeg 9.0.2](https://github.com/FFmpeg/FFmpeg/tree/n9.0.2) | **提取中**：已实测多音轨、映射、音频过滤，以及部分视频裁剪、缩放、帧率和无损转码；库、格式、工具等大量行为未完成。 |
-| 命令行 / JSON 处理 | [jq](https://github.com/recipkg/jq) | [jq 1.8.2](https://github.com/jqlang/jq/tree/34f7186b86743a083a589741b6cea95293524108) | **提取中**：部分过滤、绑定、函数、归约、JSON 解析和输入输出已对照本机；[独立重建](https://github.com/recipkg/jq-workspace)已开始，仍有验收失败。 |
+| 命令行 / JSON 处理 | [jq](https://github.com/recipkg/jq) | [jq 1.8.2](https://github.com/jqlang/jq/tree/34f7186b86743a083a589741b6cea95293524108) | **提取中**：部分过滤、绑定、函数、归约、JSON 解析和输入输出已对照本机；[独立重建](https://github.com/recipkg/jq-workspace)通过有限的函数和作用域样本，高精度数字、JSON 边界及流式输入输出仍有验收失败。 |
 | 命令行 / 文本搜索 | [ripgrep](https://github.com/recipkg/ripgrep) | [ripgrep 15.2.0](https://github.com/BurntSushi/ripgrep/tree/e89fff89ac9af12e8d4ce9d5fd07beb408ca730f) | **提取中**：本机对照忽略规则、glob、标准输入及 JSON 字节偏移，接入正则配方；完整行为及重建未验收。 |
 | 基础能力 / 正则引擎 | [regex](https://github.com/recipkg/regex) | [rust-lang/regex 1.13.0](https://github.com/rust-lang/regex/tree/926af2e68eca3ce089815790541cf50759ba2c59) | **提取中**：上游库适配器验证少量字符串及字节匹配、Unicode 与错误；完整字节行为、语法和重建未完成。 |
 | 通讯与社交 | [zulip](https://github.com/recipkg/zulip) | [Zulip 指定源码提交](https://github.com/zulip/zulip/tree/dd5adc2de6c43bd7bac7d1a0e6dc18c9364268a7) | **提取中**：整理频道、主题、消息及事件队列的部分源码合同；上游服务、权限、同步和实际客户端尚未运行验收。 |
