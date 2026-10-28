@@ -18,6 +18,7 @@
 | 命令行 / JSON 处理 | [jq](https://github.com/recipkg/jq) | [jq 1.8.2](https://github.com/jqlang/jq/tree/34f7186b86743a083a589741b6cea95293524108) | **提取中**：部分过滤、绑定、函数、归约、JSON 解析和输入输出已对照本机；[独立重建](https://github.com/recipkg/jq-workspace)修复已发现的大数舍入样本，并通过有限的数值与流式对照；完整语言、解析及数值语义未验证。 |
 | 命令行 / 文本搜索 | [ripgrep](https://github.com/recipkg/ripgrep) | [ripgrep 15.2.0](https://github.com/BurntSushi/ripgrep/tree/e89fff89ac9af12e8d4ce9d5fd07beb408ca730f) | **提取中**：本机对照忽略规则、glob、标准输入及 JSON 字节偏移，接入正则配方；完整行为及重建未验收。 |
 | 基础能力 / 正则引擎 | [regex](https://github.com/recipkg/regex) | [rust-lang/regex 1.13.0](https://github.com/rust-lang/regex/tree/926af2e68eca3ce089815790541cf50759ba2c59) | **提取中**：上游库适配器验证少量字符串及字节匹配、Unicode 与错误；完整字节行为、语法和重建未完成。 |
+| 数据与存储 / 键值服务 | [valkey](https://github.com/recipkg/valkey) | [Valkey 9.1.2 指定源码提交](https://github.com/valkey-io/valkey/tree/7f1dffedff6de73058b2c2a389422b6ecd56c8fb) | **提取中**：隔离发行版服务进程验证少量二进制值、事务冲突、ACL 和正常快照重启；完整协议、故障恢复、集群和独立重建尚未验收。 |
 | 通讯与社交 | [zulip](https://github.com/recipkg/zulip) | [Zulip 指定源码提交](https://github.com/zulip/zulip/tree/dd5adc2de6c43bd7bac7d1a0e6dc18c9364268a7) | **提取中**：整理频道、主题、消息及事件队列的部分源码合同；上游服务、权限、同步和实际客户端尚未运行验收。 |
 | 内容与知识 | [miniflux](https://github.com/recipkg/miniflux) | [Miniflux 指定源码提交](https://github.com/miniflux/v2/tree/3945f3daa0a90040f761d79a5f62a678fe86ba4e) | **提取中**：列出全部 v1 路由，隔离实测部分权限、文章、RSS、OPML 和浏览器流程；接口合同、Web 与其他功能仍未完整提取或重建。 |
 | 协作与办公 | [vikunja](https://github.com/recipkg/vikunja) | [Vikunja 指定源码提交](https://github.com/go-vikunja/vikunja/tree/e37ebc0d10db366ff111bc4bb74a696d7cfc912e) | **提取中**：隔离后端实测账户、任务、用户共享及重启；完整 API、真实 UI 和其他权限仍未完成验证。 |
@@ -34,7 +35,7 @@
 
 ## 可重复对照测试
 
-[标准库黑盒样本测试](https://github.com/recipkg/standard-library-verification)提供 regex、jq、ripgrep、FFmpeg、Miniflux、Vikunja、Syncthing、OpenHands Agent SDK 和 OpenClaw 的样本与可执行断言，可指定上游或重建程序路径。OpenClaw 样本使用不同于固定源码的发布包。测试仓库不属于配方归档；仅检查已有的少量样本，跳过、通过或归档检查都不代表软件已完整重建。每份配方的 `COVERAGE.md` 是覆盖状态依据。
+[标准库黑盒样本测试](https://github.com/recipkg/standard-library-verification)提供 regex、jq、ripgrep、FFmpeg、Valkey、Miniflux、Vikunja、Syncthing、OpenHands Agent SDK 和 OpenClaw 的样本与可执行断言，可指定上游或重建程序路径。Valkey 使用发行版构建，OpenClaw 使用不同于固定源码的发布包。测试仓库不属于配方归档；仅检查已有的少量样本，跳过、通过或归档检查都不代表软件已完整重建。每份配方的 `COVERAGE.md` 是覆盖状态依据。
 
 ## 首批分类与候选来源
 
@@ -52,6 +53,7 @@
 | Agent 应用 / 个人助手 | [OpenClaw](https://github.com/openclaw/openclaw) |
 | Agent 框架 / 执行引擎 | [OpenHands Software Agent SDK](https://github.com/OpenHands/software-agent-sdk)、[LangGraph](https://github.com/langchain-ai/langgraph) |
 | Agent 工作流平台 | [Dify](https://github.com/langgenius/dify)；仓库许可含额外条件，提取前应核实具体版本的完整许可。 |
+| 数据与存储 | [Valkey](https://github.com/valkey-io/valkey) |
 | 命令行 / 多媒体 | [FFmpeg](https://github.com/FFmpeg/FFmpeg) |
 | 命令行 / 数据与搜索 | [jq](https://github.com/jqlang/jq)、[ripgrep](https://github.com/BurntSushi/ripgrep) |
 
