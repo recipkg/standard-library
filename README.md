@@ -28,7 +28,7 @@
 | AI 聊天 / Agent 管理 | [librechat](https://github.com/recipkg/librechat) | [LibreChat 指定源码提交](https://github.com/LibreChat-AI/LibreChat/tree/8d3da9bbb220a0a96be9330a2e1cbd385fb786d5) | **提取中**：部分消息 API、Agent 管理认证与权限已对照源码；仅做语法检查，服务和重建未验收。 |
 | Agent 应用 / 个人助手 | [openclaw](https://github.com/recipkg/openclaw) | [OpenClaw 指定源码提交](https://github.com/openclaw/openclaw/tree/51420782b3810b4aa1230aa9621aec78f7dbbd3c) | **提取中**：已整理配对、技能与沙箱；不同提交的发布包通过模拟模型和正常重启样例，固定源码与重建未验收。 |
 | 设计方法 / 质量合同 | [design-foundations](https://github.com/recipkg/design-foundations) | Apple、Microsoft、Android、IBM、GOV.UK、W3C 官方指南，详见配方来源 | **首版可用**：归档与依赖交付已检查；具体产品须独立验收。 |
-| 设计方法 / 视觉方向 | [design-directions](https://github.com/recipkg/design-directions) | 基于产品任务、内容、平台与来源资料整理 | **首版可用**：包含阅读、工作台、服务、沉浸、品牌、原生和数据方向，递归依赖基础合同。 |
+| 设计方法 / 视觉方向 | [design-directions](https://github.com/recipkg/design-directions) | 基于产品任务、内容、平台与来源资料整理 | **首版可用**：包含阅读、工作台、服务、沉浸、品牌、原生、数据和 Agent 协作方向，递归依赖基础合同；具体界面仍须实际验收。 |
 
 配方存在或 `recipkg check` 通过，并不代表配方已完整，也不代表软件已根据配方重建。每个仓库须明确记录源码版本、许可、已观察内容、未知项、可复现验收和重建验证状态。
 
