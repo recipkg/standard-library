@@ -10,6 +10,9 @@
 | 通讯与社交 | [zulip](https://github.com/recipkg/zulip) | [Zulip 指定源码提交](https://github.com/zulip/zulip/tree/dd5adc2de6c43bd7bac7d1a0e6dc18c9364268a7) | **提取中**：初步整理频道、主题和消息；权限、同步和实际客户端未完成验收。 |
 | 内容与知识 | [miniflux](https://github.com/recipkg/miniflux) | [Miniflux 指定源码提交](https://github.com/miniflux/v2/tree/3945f3daa0a90040f761d79a5f62a678fe86ba4e) | **提取中**：源解析器测试通过；Web、数据库、API 等尚未实际运行或完整提炼。 |
 | 协作与办公 | [vikunja](https://github.com/recipkg/vikunja) | [Vikunja 指定源码提交](https://github.com/go-vikunja/vikunja/tree/e37ebc0d10db366ff111bc4bb74a696d7cfc912e) | **提取中**：初步整理任务和视图；UI、接口、权限和持久化未完成验证。 |
+| 文件与媒体 | [syncthing](https://github.com/recipkg/syncthing) | [Syncthing 指定源码提交](https://github.com/syncthing/syncthing/tree/ed38528d7fba3dd6a42c9c9fc6780af432dc15d2) | **提取中**：初步整理同步流程；协议、冲突、恢复和数据安全尚未实际验收。 |
+| Agent 应用 / 软件开发 | [openhands](https://github.com/recipkg/openhands) | [OpenHands Agent Canvas 指定源码提交](https://github.com/OpenHands/OpenHands/tree/17af119c331a87e881417e4afe95f83dd3c5cb2c) | **提取中**：初步整理控制界面及后端；尚未运行或重建。依赖 Agent SDK 和设计配方。 |
+| Agent 框架 / 执行引擎 | [openhands-agent-sdk](https://github.com/recipkg/openhands-agent-sdk) | [OpenHands Software Agent SDK 指定源码提交](https://github.com/OpenHands/software-agent-sdk/tree/46b1fa5cb91ada17e6ec938c7e8624a4fa19fa98) | **提取中**：初步整理会话、工具、工作区和服务；接口与安全行为未完成提取与验收。 |
 | 设计方法 / 质量合同 | [design-foundations](https://github.com/recipkg/design-foundations) | Apple、Microsoft、Android、IBM、GOV.UK、W3C 官方指南，详见配方来源 | **首版可用**：归档与依赖交付已检查；具体产品须独立验收。 |
 | 设计方法 / 视觉方向 | [design-directions](https://github.com/recipkg/design-directions) | 基于产品任务、内容、平台与来源资料整理 | **首版可用**：包含阅读、工作台、服务、沉浸、品牌、原生和数据方向，递归依赖基础合同。 |
 
@@ -26,7 +29,11 @@
 | 协作与办公 | [Vikunja](https://github.com/go-vikunja/vikunja) |
 | 文件与媒体 | [Syncthing](https://github.com/syncthing/syncthing) |
 | 开发者工具 | [Gitea](https://github.com/go-gitea/gitea) |
-| AI 与自动化 | [LibreChat](https://github.com/LibreChat-AI/LibreChat)；开始提取前须核对指定提交及其完整许可。 |
+| AI 聊天 | [LibreChat](https://github.com/LibreChat-AI/LibreChat)；开始提取前须核对指定提交及其完整许可。 |
+| Agent 应用 / 软件开发 | [OpenHands Agent Canvas](https://github.com/OpenHands/OpenHands) |
+| Agent 应用 / 个人助手 | [OpenClaw](https://github.com/openclaw/openclaw) |
+| Agent 框架 / 执行引擎 | [OpenHands Software Agent SDK](https://github.com/OpenHands/software-agent-sdk)、[LangGraph](https://github.com/langchain-ai/langgraph) |
+| Agent 工作流平台 | [Dify](https://github.com/langgenius/dify)；仓库许可含额外条件，提取前应核实具体版本的完整许可。 |
 | 命令行 / 多媒体 | [FFmpeg](https://github.com/FFmpeg/FFmpeg) |
 
 后续可增加网络与基础设施、数据与存储、系统工具、安全与身份、商业与运营、教育与科研、设计与创作、游戏与娱乐等分类。软件可有多个标签；分类不等于依赖关系。
