@@ -6,7 +6,7 @@
 
 | 分类 | 配方 | 上游观察来源 | 状态 |
 | --- | --- | --- | --- |
-| 命令行 / 多媒体 | [ffmpeg](https://github.com/recipkg/ffmpeg) | [FFmpeg 9.0.2](https://github.com/FFmpeg/FFmpeg/tree/n9.0.2) | **提取中**：已实测多音轨、双输入、负向及可选映射与流复制；库、格式、工具等大量行为未完成。 |
+| 命令行 / 多媒体 | [ffmpeg](https://github.com/recipkg/ffmpeg) | [FFmpeg 9.0.2](https://github.com/FFmpeg/FFmpeg/tree/n9.0.2) | **提取中**：已实测多音轨、映射、流复制，以及音频混合、分支和过滤图错误；库、格式、工具等大量行为未完成。 |
 | 命令行 / JSON 处理 | [jq](https://github.com/recipkg/jq) | [jq 1.8.2](https://github.com/jqlang/jq/tree/34f7186b86743a083a589741b6cea95293524108) | **提取中**：部分过滤、路径赋值、流式及文件输入输出、错误处理已对照本机；完整语言及重建未验收。 |
 | 命令行 / 文本搜索 | [ripgrep](https://github.com/recipkg/ripgrep) | [ripgrep 15.2.0](https://github.com/BurntSushi/ripgrep/tree/e89fff89ac9af12e8d4ce9d5fd07beb408ca730f) | **提取中**：部分搜索范围、JSON 输出和退出状态已对照本机；完整行为及重建未验收。 |
 | 通讯与社交 | [zulip](https://github.com/recipkg/zulip) | [Zulip 指定源码提交](https://github.com/zulip/zulip/tree/dd5adc2de6c43bd7bac7d1a0e6dc18c9364268a7) | **提取中**：初步整理频道、主题和消息；权限、同步和实际客户端未完成验收。 |
