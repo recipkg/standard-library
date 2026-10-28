@@ -17,7 +17,7 @@
 | 命令行 / 多媒体 | [ffmpeg](https://github.com/recipkg/ffmpeg) | [FFmpeg 9.0.2](https://github.com/FFmpeg/FFmpeg/tree/n9.0.2) | **提取中**：已实测多音轨、映射、流复制，以及音频混合、分支和过滤图错误；库、格式、工具等大量行为未完成。 |
 | 命令行 / JSON 处理 | [jq](https://github.com/recipkg/jq) | [jq 1.8.2](https://github.com/jqlang/jq/tree/34f7186b86743a083a589741b6cea95293524108) | **提取中**：部分过滤、路径赋值、流式及文件输入输出、错误处理已对照本机；完整语言及重建未验收。 |
 | 命令行 / 文本搜索 | [ripgrep](https://github.com/recipkg/ripgrep) | [ripgrep 15.2.0](https://github.com/BurntSushi/ripgrep/tree/e89fff89ac9af12e8d4ce9d5fd07beb408ca730f) | **提取中**：本机对照忽略规则、glob、标准输入及 JSON 字节偏移，接入正则配方；完整行为及重建未验收。 |
-| 基础能力 / 正则引擎 | [regex](https://github.com/recipkg/regex) | [rust-lang/regex 1.13.0](https://github.com/rust-lang/regex/tree/926af2e68eca3ce089815790541cf50759ba2c59) | **提取中**：上游库适配器验证少量字符串匹配、Unicode 与错误；字节 API、完整语法和重建未完成。 |
+| 基础能力 / 正则引擎 | [regex](https://github.com/recipkg/regex) | [rust-lang/regex 1.13.0](https://github.com/rust-lang/regex/tree/926af2e68eca3ce089815790541cf50759ba2c59) | **提取中**：上游库适配器验证少量字符串及字节匹配、Unicode 与错误；完整字节行为、语法和重建未完成。 |
 | 通讯与社交 | [zulip](https://github.com/recipkg/zulip) | [Zulip 指定源码提交](https://github.com/zulip/zulip/tree/dd5adc2de6c43bd7bac7d1a0e6dc18c9364268a7) | **提取中**：整理频道、主题、消息及事件队列的部分源码合同；上游服务、权限、同步和实际客户端尚未运行验收。 |
 | 内容与知识 | [miniflux](https://github.com/recipkg/miniflux) | [Miniflux 指定源码提交](https://github.com/miniflux/v2/tree/3945f3daa0a90040f761d79a5f62a678fe86ba4e) | **提取中**：列出全部 v1 路由，隔离实测部分权限、文章、RSS、OPML 和浏览器流程；接口合同、Web 与其他功能仍未完整提取或重建。 |
 | 协作与办公 | [vikunja](https://github.com/recipkg/vikunja) | [Vikunja 指定源码提交](https://github.com/go-vikunja/vikunja/tree/e37ebc0d10db366ff111bc4bb74a696d7cfc912e) | **提取中**：隔离后端实测账户、任务、用户共享及重启；完整 API、真实 UI 和其他权限仍未完成验证。 |
