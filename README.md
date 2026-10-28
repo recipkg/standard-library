@@ -6,7 +6,9 @@
 
 | 分类 | 配方 | 上游观察来源 | 状态 |
 | --- | --- | --- | --- |
-| 命令行 / 多媒体 | [ffmpeg](https://github.com/recipkg/ffmpeg) | [FFmpeg 9.0.2](https://github.com/FFmpeg/FFmpeg/tree/n9.0.2) | **提取中**：仅初步覆盖 CLI 核心，库、格式、工具等大量行为未完成。 |
+| 命令行 / 多媒体 | [ffmpeg](https://github.com/recipkg/ffmpeg) | [FFmpeg 9.0.2](https://github.com/FFmpeg/FFmpeg/tree/n9.0.2) | **提取中**：已实测多音轨默认标记与流复制；库、格式、工具等大量行为未完成。 |
+| 命令行 / JSON 处理 | [jq](https://github.com/recipkg/jq) | [jq 1.8.2](https://github.com/jqlang/jq/tree/34f7186b86743a083a589741b6cea95293524108) | **提取中**：部分过滤、输出和退出状态已对照本机；完整语言及重建未验收。 |
+| 命令行 / 文本搜索 | [ripgrep](https://github.com/recipkg/ripgrep) | [ripgrep 15.2.0](https://github.com/BurntSushi/ripgrep/tree/e89fff89ac9af12e8d4ce9d5fd07beb408ca730f) | **提取中**：部分搜索范围、JSON 输出和退出状态已对照本机；完整行为及重建未验收。 |
 | 通讯与社交 | [zulip](https://github.com/recipkg/zulip) | [Zulip 指定源码提交](https://github.com/zulip/zulip/tree/dd5adc2de6c43bd7bac7d1a0e6dc18c9364268a7) | **提取中**：初步整理频道、主题和消息；权限、同步和实际客户端未完成验收。 |
 | 内容与知识 | [miniflux](https://github.com/recipkg/miniflux) | [Miniflux 指定源码提交](https://github.com/miniflux/v2/tree/3945f3daa0a90040f761d79a5f62a678fe86ba4e) | **提取中**：源解析器测试通过；Web、数据库、API 等尚未实际运行或完整提炼。 |
 | 协作与办公 | [vikunja](https://github.com/recipkg/vikunja) | [Vikunja 指定源码提交](https://github.com/go-vikunja/vikunja/tree/e37ebc0d10db366ff111bc4bb74a696d7cfc912e) | **提取中**：初步整理任务和视图；UI、接口、权限和持久化未完成验证。 |
@@ -38,6 +40,7 @@
 | Agent 框架 / 执行引擎 | [OpenHands Software Agent SDK](https://github.com/OpenHands/software-agent-sdk)、[LangGraph](https://github.com/langchain-ai/langgraph) |
 | Agent 工作流平台 | [Dify](https://github.com/langgenius/dify)；仓库许可含额外条件，提取前应核实具体版本的完整许可。 |
 | 命令行 / 多媒体 | [FFmpeg](https://github.com/FFmpeg/FFmpeg) |
+| 命令行 / 数据与搜索 | [jq](https://github.com/jqlang/jq)、[ripgrep](https://github.com/BurntSushi/ripgrep) |
 
 后续可增加网络与基础设施、数据与存储、系统工具、安全与身份、商业与运营、教育与科研、设计与创作、游戏与娱乐等分类。软件可有多个标签；分类不等于依赖关系。
 
