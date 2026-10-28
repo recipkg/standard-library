@@ -12,7 +12,7 @@
 | 通讯与社交 | [zulip](https://github.com/recipkg/zulip) | [Zulip 指定源码提交](https://github.com/zulip/zulip/tree/dd5adc2de6c43bd7bac7d1a0e6dc18c9364268a7) | **提取中**：初步整理频道、主题和消息；权限、同步和实际客户端未完成验收。 |
 | 内容与知识 | [miniflux](https://github.com/recipkg/miniflux) | [Miniflux 指定源码提交](https://github.com/miniflux/v2/tree/3945f3daa0a90040f761d79a5f62a678fe86ba4e) | **提取中**：上游解析器测试及隔离 PostgreSQL/API/RSS 主路径已实际运行；Web 与其他功能仍未完整提取或重建。 |
 | 协作与办公 | [vikunja](https://github.com/recipkg/vikunja) | [Vikunja 指定源码提交](https://github.com/go-vikunja/vikunja/tree/e37ebc0d10db366ff111bc4bb74a696d7cfc912e) | **提取中**：初步整理任务和视图；UI、接口、权限和持久化未完成验证。 |
-| 文件与媒体 | [syncthing](https://github.com/recipkg/syncthing) | [Syncthing 指定源码提交](https://github.com/syncthing/syncthing/tree/ed38528d7fba3dd6a42c9c9fc6780af432dc15d2) | **提取中**：初步整理同步流程；协议、冲突、恢复和数据安全尚未实际验收。 |
+| 文件与媒体 | [syncthing](https://github.com/recipkg/syncthing) | [Syncthing 指定源码提交](https://github.com/syncthing/syncthing/tree/ed38528d7fba3dd6a42c9c9fc6780af432dc15d2) | **提取中**：已测试隔离同机双进程新增、删除及离线冲突；真实设备、协议、安全与恢复尚未完整验收。 |
 | Agent 应用 / 软件开发 | [openhands](https://github.com/recipkg/openhands) | [OpenHands Agent Canvas 指定源码提交](https://github.com/OpenHands/OpenHands/tree/17af119c331a87e881417e4afe95f83dd3c5cb2c) | **提取中**：初步整理控制界面及后端；尚未运行或重建。依赖 Agent SDK 和设计配方。 |
 | Agent 框架 / 执行引擎 | [openhands-agent-sdk](https://github.com/recipkg/openhands-agent-sdk) | [OpenHands Software Agent SDK 指定源码提交](https://github.com/OpenHands/software-agent-sdk/tree/46b1fa5cb91ada17e6ec938c7e8624a4fa19fa98) | **提取中**：初步整理会话、工具、工作区和服务；接口与安全行为未完成提取与验收。 |
 | 开发者工具 / Git 协作 | [gitea](https://github.com/recipkg/gitea) | [Gitea 指定源码提交](https://github.com/go-gitea/gitea/tree/02c03d69d35963e40f9662d4a793a55d78649444) | **提取中**：议题 API 的创建和并发编辑已有部分源码合同；CSV 模块测试通过，完整服务未验收。 |
@@ -25,7 +25,7 @@
 
 ## 可重复对照测试
 
-[标准库黑盒样本测试](https://github.com/recipkg/standard-library-verification)提供 jq、ripgrep、FFmpeg 和 Miniflux 的隔离输入与可执行断言，可指定上游或重建程序路径。测试仓库不属于配方归档；仅检查已有的少量样本，跳过、通过或归档检查都不代表软件已完整重建。每份配方的 `COVERAGE.md` 是覆盖状态依据。
+[标准库黑盒样本测试](https://github.com/recipkg/standard-library-verification)提供 jq、ripgrep、FFmpeg、Miniflux 和 Syncthing 的隔离输入与可执行断言，可指定上游或重建程序路径。测试仓库不属于配方归档；仅检查已有的少量样本，跳过、通过或归档检查都不代表软件已完整重建。每份配方的 `COVERAGE.md` 是覆盖状态依据。
 
 ## 首批分类与候选来源
 
