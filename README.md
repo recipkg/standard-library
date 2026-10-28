@@ -1,6 +1,14 @@
 # Recipkg 标准库
 
-本仓库是 Recipkg 软件配方的分类与状态目录。每个具体配方在独立仓库维护，保存软件行为、接口、依赖、验收条件和已知缺口，供 Agent 根据配方重建；本目录不是包注册表，也不是完整配方的替代品。
+**从开源软件提取可复用的配方，记录行为，也记录尚未验证的部分。**
+
+[Recipkg](https://github.com/recipkg/recipkg) · [配方格式](https://github.com/recipkg/recipkg/blob/main/docs/SPEC.md) · [黑盒验证](https://github.com/recipkg/standard-library-verification)
+
+![从软件与依赖整理配方，再交给 Agent 重建](https://raw.githubusercontent.com/recipkg/recipkg/main/assets/recipkg-cover.png)
+
+本仓库按软件类别整理配方和覆盖状态。每个配方在独立仓库维护，保存软件行为、接口、依赖、验收条件和已知缺口，供 Agent 根据配方重建；本目录不是包注册表，也不是完整配方的替代品。
+
+找到适合的条目后，先读其 `RECIPE.md` 和 `COVERAGE.md`，再按固定提交声明依赖。打包会收集递归材料；软件是否可重建，仍需运行实际验收。
 
 ## 已开始
 
@@ -17,7 +25,7 @@
 | Agent 框架 / 执行引擎 | [openhands-agent-sdk](https://github.com/recipkg/openhands-agent-sdk) | [OpenHands Software Agent SDK 指定源码提交](https://github.com/OpenHands/software-agent-sdk/tree/46b1fa5cb91ada17e6ec938c7e8624a4fa19fa98) | **提取中**：实测本机会话、工具、服务端认证与正常重启，以及两种 WebSocket 的重放和实时消息；远程协议、其他工具与安全行为尚未完整提取或重建。 |
 | 开发者工具 / Git 协作 | [gitea](https://github.com/recipkg/gitea) | [Gitea 指定源码提交](https://github.com/go-gitea/gitea/tree/02c03d69d35963e40f9662d4a793a55d78649444) | **提取中**：议题 API 的创建和并发编辑已有部分源码合同；CSV 模块测试通过，完整服务未验收。 |
 | AI 聊天 / Agent 管理 | [librechat](https://github.com/recipkg/librechat) | [LibreChat 指定源码提交](https://github.com/LibreChat-AI/LibreChat/tree/8d3da9bbb220a0a96be9330a2e1cbd385fb786d5) | **提取中**：部分消息 API 已对照源码；仅做语法检查，服务和重建未验收。 |
-| Agent 应用 / 个人助手 | [openclaw](https://github.com/recipkg/openclaw) | [OpenClaw 指定源码提交](https://github.com/openclaw/openclaw/tree/51420782b3810b4aa1230aa9621aec78f7dbbd3c) | **提取中**：初步提取配对、技能与沙箱规则，未运行上游或重建验收。 |
+| Agent 应用 / 个人助手 | [openclaw](https://github.com/recipkg/openclaw) | [OpenClaw 指定源码提交](https://github.com/openclaw/openclaw/tree/51420782b3810b4aa1230aa9621aec78f7dbbd3c) | **提取中**：已整理配对、技能与沙箱；不同提交的发布包通过模拟模型和正常重启样例，固定源码与重建未验收。 |
 | 设计方法 / 质量合同 | [design-foundations](https://github.com/recipkg/design-foundations) | Apple、Microsoft、Android、IBM、GOV.UK、W3C 官方指南，详见配方来源 | **首版可用**：归档与依赖交付已检查；具体产品须独立验收。 |
 | 设计方法 / 视觉方向 | [design-directions](https://github.com/recipkg/design-directions) | 基于产品任务、内容、平台与来源资料整理 | **首版可用**：包含阅读、工作台、服务、沉浸、品牌、原生和数据方向，递归依赖基础合同。 |
 
@@ -25,7 +33,7 @@
 
 ## 可重复对照测试
 
-[标准库黑盒样本测试](https://github.com/recipkg/standard-library-verification)提供 jq、ripgrep、FFmpeg、Miniflux、Vikunja、Syncthing 和 OpenHands Agent SDK 的隔离输入与可执行断言，可指定上游或重建程序路径。测试仓库不属于配方归档；仅检查已有的少量样本，跳过、通过或归档检查都不代表软件已完整重建。每份配方的 `COVERAGE.md` 是覆盖状态依据。
+[标准库黑盒样本测试](https://github.com/recipkg/standard-library-verification)提供 jq、ripgrep、FFmpeg、Miniflux、Vikunja、Syncthing、OpenHands Agent SDK 和 OpenClaw 的样本与可执行断言，可指定上游或重建程序路径。OpenClaw 样本使用不同于固定源码的发布包。测试仓库不属于配方归档；仅检查已有的少量样本，跳过、通过或归档检查都不代表软件已完整重建。每份配方的 `COVERAGE.md` 是覆盖状态依据。
 
 ## 首批分类与候选来源
 
