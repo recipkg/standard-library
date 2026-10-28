@@ -25,7 +25,7 @@
 | 协作与办公 | [Vikunja](https://github.com/go-vikunja/vikunja) |
 | 文件与媒体 | [Syncthing](https://github.com/syncthing/syncthing) |
 | 开发者工具 | [Gitea](https://github.com/go-gitea/gitea) |
-| AI 与自动化 | [Open WebUI](https://github.com/open-webui/open-webui)；其许可须逐版本单独核实。 |
+| AI 与自动化 | [LibreChat](https://github.com/LibreChat-AI/LibreChat)；开始提取前须核对指定提交及其完整许可。 |
 | 命令行 / 多媒体 | [FFmpeg](https://github.com/FFmpeg/FFmpeg) |
 
 后续可增加网络与基础设施、数据与存储、系统工具、安全与身份、商业与运营、教育与科研、设计与创作、游戏与娱乐等分类。软件可有多个标签；分类不等于依赖关系。
