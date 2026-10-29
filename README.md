@@ -25,6 +25,7 @@
 | 文件与媒体 | [syncthing](https://github.com/recipkg/syncthing) | [Syncthing 指定源码提交](https://github.com/syncthing/syncthing/tree/ed38528d7fba3dd6a42c9c9fc6780af432dc15d2) | **提取中**：已测试隔离同机双进程新增、删除及离线冲突；真实设备、协议、安全与恢复尚未完整验收。 |
 | Agent 应用 / 软件开发 | [openhands](https://github.com/recipkg/openhands) | [OpenHands Agent Canvas 指定源码提交](https://github.com/OpenHands/OpenHands/tree/17af119c331a87e881417e4afe95f83dd3c5cb2c) | **提取中**：整理会话和消息；已构建固定源码并实测浏览器中的终端调用、认证失败和会话恢复；此前 npm 发布包样本来自不同提交。完整界面和独立重建尚未验收。 |
 | Agent 框架 / 执行引擎 | [openhands-agent-sdk](https://github.com/recipkg/openhands-agent-sdk) | [OpenHands Software Agent SDK 指定源码提交](https://github.com/OpenHands/software-agent-sdk/tree/46b1fa5cb91ada17e6ec938c7e8624a4fa19fa98) | **提取中**：实测本机会话、工具、模拟模型调用项目技能、认证失败后的会话恢复、服务端事件与重启及两种 WebSocket；事件查询中观察到模拟上游错误原文。远程协议、其他工具与安全行为尚未完整提取或重建。 |
+| Agent 框架 / 执行引擎 | [langgraph](https://github.com/recipkg/langgraph) | [LangGraph 1.2.18 固定源码提交](https://github.com/langchain-ai/langgraph/tree/3521f08e21a7d89c28331191374bc85c11ecb6e2) | **提取中**：固定 Python 包版本；本机验证状态归约、`updates` 流和内存检查点中断恢复三个样例。完整 API、持久化检查点及独立重建尚未验收，详见[覆盖记录](https://github.com/recipkg/langgraph/blob/main/COVERAGE.md)。 |
 | 开发者工具 / Git 协作 | [gitea](https://github.com/recipkg/gitea) | [Gitea 指定源码提交](https://github.com/go-gitea/gitea/tree/02c03d69d35963e40f9662d4a793a55d78649444) | **提取中**：固定源码后端实测私有 Git 仓库、只读协作、议题权限、版本冲突与正常重启；前端、完整服务及独立重建尚未验收。 |
 | AI 聊天 / Agent 管理 | [librechat](https://github.com/recipkg/librechat) | [LibreChat 指定源码提交](https://github.com/LibreChat-AI/LibreChat/tree/8d3da9bbb220a0a96be9330a2e1cbd385fb786d5) | **提取中**：部分消息 API、Agent 管理认证与权限已对照源码；仅做语法检查，服务和重建未验收。 |
 | Agent 应用 / 个人助手 | [openclaw](https://github.com/recipkg/openclaw) | [OpenClaw 指定源码提交](https://github.com/openclaw/openclaw/tree/51420782b3810b4aa1230aa9621aec78f7dbbd3c) | **提取中**：已整理配对、技能与沙箱；固定源码在模拟模型下通过两轮对话与正常重启后的历史恢复样例；更短等待的一次运行超时，完整功能和独立重建未验收。 |
@@ -37,25 +38,14 @@
 
 [标准库黑盒样本测试](https://github.com/recipkg/standard-library-verification)提供 regex、jq、ripgrep、FFmpeg、Valkey、Miniflux、Vikunja、Syncthing、Gitea、OpenHands Agent SDK 和 OpenClaw 的样本与可执行断言，可指定上游或重建程序路径。Valkey 使用发行版构建；OpenClaw 分别对照固定源码和不同提交的发布包，详见配方覆盖记录。测试仓库不属于配方归档；仅检查已有的少量样本，跳过、通过或归档检查都不代表软件已完整重建。每份配方的 `COVERAGE.md` 是覆盖状态依据。
 
-## 首批分类与候选来源
+## 后续候选
 
-以下是候选，尚未提炼或验证其完整重建能力；开始前需再次核实项目版本、许可、范围及证据。星数只是发现信号，不代表完整性或质量。
+以下项目尚未进入标准库配方。开始前需再次核实项目版本、许可、范围及证据；星数只是发现信号，不代表完整性或质量。
 
 | 分类 | 候选开源项目 |
 | --- | --- |
-| 通讯与社交 | [Zulip](https://github.com/zulip/zulip) |
-| 内容与知识 | [Miniflux](https://github.com/miniflux/v2) |
-| 协作与办公 | [Vikunja](https://github.com/go-vikunja/vikunja) |
-| 文件与媒体 | [Syncthing](https://github.com/syncthing/syncthing) |
-| 开发者工具 | [Gitea](https://github.com/go-gitea/gitea) |
 | AI 聊天 | [LibreChat](https://github.com/LibreChat-AI/LibreChat)；开始提取前须核对指定提交及其完整许可。 |
-| Agent 应用 / 软件开发 | [OpenHands Agent Canvas](https://github.com/OpenHands/OpenHands) |
-| Agent 应用 / 个人助手 | [OpenClaw](https://github.com/openclaw/openclaw) |
-| Agent 框架 / 执行引擎 | [OpenHands Software Agent SDK](https://github.com/OpenHands/software-agent-sdk)、[LangGraph](https://github.com/langchain-ai/langgraph) |
 | Agent 工作流平台 | [Dify](https://github.com/langgenius/dify)；仓库许可含额外条件，提取前应核实具体版本的完整许可。 |
-| 数据与存储 | [Valkey](https://github.com/valkey-io/valkey) |
-| 命令行 / 多媒体 | [FFmpeg](https://github.com/FFmpeg/FFmpeg) |
-| 命令行 / 数据与搜索 | [jq](https://github.com/jqlang/jq)、[ripgrep](https://github.com/BurntSushi/ripgrep) |
 
 后续可增加网络与基础设施、数据与存储、系统工具、安全与身份、商业与运营、教育与科研、设计与创作、游戏与娱乐等分类。软件可有多个标签；分类不等于依赖关系。
 
