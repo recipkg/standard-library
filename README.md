@@ -10,28 +10,39 @@
 
 找到适合的条目后，先读其 `RECIPE.md` 和 `COVERAGE.md`，再按固定提交声明依赖。打包会收集递归材料；软件是否可重建，仍需运行实际验收。
 
-## 已开始
+## 配方目录
 
-| 分类 | 配方 | 上游观察来源 | 状态 |
+| 分类 | Recipkg 配方 | 固定上游来源 | 阶段 |
 | --- | --- | --- | --- |
-| 命令行 / 多媒体 | [ffmpeg](https://github.com/recipkg/ffmpeg) | [FFmpeg 9.0.2](https://github.com/FFmpeg/FFmpeg/tree/n9.0.2) | **提取中**：本机 n9.0.2 上 9 项黑盒样本通过，覆盖多音轨/多输入映射、音频过滤、ffprobe JSON、RGB24 视频滤镜与帧时间戳；库、格式、工具等大量行为及独立重建未完成。 |
-| 命令行 / JSON 处理 | [jq](https://github.com/recipkg/jq) | [jq 1.8.2](https://github.com/jqlang/jq/tree/34f7186b86743a083a589741b6cea95293524108) | **提取中**：部分过滤、绑定、函数、归约、JSON 解析和输入输出已对照本机；[独立重建](https://github.com/recipkg/jq-workspace)通过有限的数值、流式、集合及聚合过滤器对照；完整语言、解析及数值语义未验证。 |
-| 命令行 / 文本搜索 | [ripgrep](https://github.com/recipkg/ripgrep) | [ripgrep 15.2.0](https://github.com/BurntSushi/ripgrep/tree/e89fff89ac9af12e8d4ce9d5fd07beb408ca730f) | **提取中**：本机对照忽略规则、glob、标准输入及 JSON 字节偏移，接入正则配方；完整行为及重建未验收。 |
-| 基础能力 / 正则引擎 | [regex](https://github.com/recipkg/regex) | [rust-lang/regex 1.13.0](https://github.com/rust-lang/regex/tree/926af2e68eca3ce089815790541cf50759ba2c59) | **提取中**：上游库适配器验证少量字符串及字节匹配、Unicode 与错误；完整字节行为、语法和重建未完成。 |
-| 数据与存储 / 键值服务 | [valkey](https://github.com/recipkg/valkey) | [Valkey 9.1.2 指定源码提交](https://github.com/valkey-io/valkey/tree/7f1dffedff6de73058b2c2a389422b6ecd56c8fb) | **提取中**：隔离发行版服务进程验证有限的二进制值、事务、ACL、AOF 进程终止恢复及本机主从重启追赶与手动提升；完整协议、断电恢复、自动故障切换、集群和独立重建尚未验收。 |
-| 通讯与社交 | [zulip](https://github.com/recipkg/zulip) | [Zulip 指定源码提交](https://github.com/zulip/zulip/tree/dd5adc2de6c43bd7bac7d1a0e6dc18c9364268a7) | **提取中**：整理频道、主题、消息及事件队列的部分源码合同；上游服务、权限、同步和实际客户端尚未运行验收。 |
-| 内容与知识 | [miniflux](https://github.com/recipkg/miniflux) | [Miniflux 指定源码提交](https://github.com/miniflux/v2/tree/3945f3daa0a90040f761d79a5f62a678fe86ba4e) | **提取中**：列出全部 v1 路由，隔离实测部分权限、文章、RSS、OPML 和浏览器流程；接口合同、Web 与其他功能仍未完整提取或重建。 |
-| 协作与办公 | [vikunja](https://github.com/recipkg/vikunja) | [Vikunja 指定源码提交](https://github.com/go-vikunja/vikunja/tree/e37ebc0d10db366ff111bc4bb74a696d7cfc912e) | **提取中**：隔离后端实测账户、任务、用户共享及重启；完整 API、真实 UI 和其他权限仍未完成验证。 |
-| 文件与媒体 | [syncthing](https://github.com/recipkg/syncthing) | [Syncthing 指定源码提交](https://github.com/syncthing/syncthing/tree/ed38528d7fba3dd6a42c9c9fc6780af432dc15d2) | **提取中**：已测试隔离同机双进程新增、删除及离线冲突；真实设备、协议、安全与恢复尚未完整验收。 |
-| Agent 应用 / 软件开发 | [openhands](https://github.com/recipkg/openhands) | [OpenHands Agent Canvas 指定源码提交](https://github.com/OpenHands/OpenHands/tree/17af119c331a87e881417e4afe95f83dd3c5cb2c) | **提取中**：整理会话和消息；已构建固定源码并实测浏览器中的终端调用、认证失败和会话恢复；此前 npm 发布包样本来自不同提交。完整界面和独立重建尚未验收。 |
-| Agent 框架 / 执行引擎 | [openhands-agent-sdk](https://github.com/recipkg/openhands-agent-sdk) | [OpenHands Software Agent SDK 指定源码提交](https://github.com/OpenHands/software-agent-sdk/tree/46b1fa5cb91ada17e6ec938c7e8624a4fa19fa98) | **提取中**：实测本机会话、工具、模拟模型调用项目技能、认证失败后的会话恢复、服务端事件与重启及两种 WebSocket；事件查询中观察到模拟上游错误原文。远程协议、其他工具与安全行为尚未完整提取或重建。 |
-| Agent 框架 / 执行引擎 | [langgraph](https://github.com/recipkg/langgraph) | [LangGraph 1.2.18 固定源码提交](https://github.com/langchain-ai/langgraph/tree/3521f08e21a7d89c28331191374bc85c11ecb6e2) | **提取中**：固定 Python 包版本；本机验证状态归约、`updates` 流和内存检查点中断恢复三个样例。完整 API、持久化检查点及独立重建尚未验收，详见[覆盖记录](https://github.com/recipkg/langgraph/blob/main/COVERAGE.md)。 |
-| Agent 工作流平台 | [dify](https://github.com/recipkg/dify) | [Dify 1.18.0 固定源码提交](https://github.com/langgenius/dify/tree/50abea97062110044f15d0e03ccecadd9ccc87ca) | **提取中**：整理 API/Web/Worker 架构和该版 Agent 路由、嵌套运行、`.ifpkg`、KnowledgeFS、`difyctl` 合同；递归归档检查通过，尚未启动上游、运行测试或独立重建。许可证另有多租户和前端标识条件，详见[覆盖与许可记录](https://github.com/recipkg/dify/blob/main/COVERAGE.md)。 |
-| 开发者工具 / Git 协作 | [gitea](https://github.com/recipkg/gitea) | [Gitea 指定源码提交](https://github.com/go-gitea/gitea/tree/02c03d69d35963e40f9662d4a793a55d78649444) | **提取中**：固定源码后端实测私有 Git 仓库、只读协作、议题权限、版本冲突与正常重启；前端、完整服务及独立重建尚未验收。 |
-| AI 聊天 / Agent 管理 | [librechat](https://github.com/recipkg/librechat) | [LibreChat 指定源码提交](https://github.com/LibreChat-AI/LibreChat/tree/8d3da9bbb220a0a96be9330a2e1cbd385fb786d5) | **提取中**：部分消息 API、Agent 管理认证与权限已对照源码；仅做语法检查，服务和重建未验收。 |
-| Agent 应用 / 个人助手 | [openclaw](https://github.com/recipkg/openclaw) | [OpenClaw 指定源码提交](https://github.com/openclaw/openclaw/tree/51420782b3810b4aa1230aa9621aec78f7dbbd3c) | **提取中**：已整理配对、技能与沙箱；固定源码在模拟模型下通过两轮对话与正常重启后的历史恢复样例；更短等待的一次运行超时，完整功能和独立重建未验收。 |
-| 设计方法 / 质量合同 | [design-foundations](https://github.com/recipkg/design-foundations) | Apple、Microsoft、Android、IBM、GOV.UK、W3C 官方指南，详见配方来源 | **首版可用**：归档与依赖交付已检查；具体产品须独立验收。 |
-| 设计方法 / 视觉方向 | [design-directions](https://github.com/recipkg/design-directions) | 基于产品任务、内容、平台与来源资料整理 | **首版可用**：包含阅读、工作台、服务、沉浸、品牌、原生、数据和 Agent 协作方向，递归依赖基础合同；具体界面仍须实际验收。 |
+| 命令行 / 多媒体 | [ffmpeg](https://github.com/recipkg/ffmpeg) | [FFmpeg 9.0.2](https://github.com/FFmpeg/FFmpeg/tree/n9.0.2) | [提取中](https://github.com/recipkg/ffmpeg/blob/main/COVERAGE.md) |
+| 命令行 / JSON 处理 | [jq](https://github.com/recipkg/jq) | [jq 1.8.2](https://github.com/jqlang/jq/tree/34f7186b86743a083a589741b6cea95293524108) | [提取中](https://github.com/recipkg/jq/blob/main/COVERAGE.md) |
+| 命令行 / 文本搜索 | [ripgrep](https://github.com/recipkg/ripgrep) | [ripgrep 15.2.0](https://github.com/BurntSushi/ripgrep/tree/e89fff89ac9af12e8d4ce9d5fd07beb408ca730f) | [提取中](https://github.com/recipkg/ripgrep/blob/main/COVERAGE.md) |
+| 基础能力 / 正则引擎 | [regex](https://github.com/recipkg/regex) | [rust-lang/regex 1.13.0](https://github.com/rust-lang/regex/tree/926af2e68eca3ce089815790541cf50759ba2c59) | [提取中](https://github.com/recipkg/regex/blob/main/COVERAGE.md) |
+| 数据与存储 / 键值服务 | [valkey](https://github.com/recipkg/valkey) | [Valkey 9.1.2 指定源码提交](https://github.com/valkey-io/valkey/tree/7f1dffedff6de73058b2c2a389422b6ecd56c8fb) | [提取中](https://github.com/recipkg/valkey/blob/main/COVERAGE.md) |
+| 通讯与社交 | [zulip](https://github.com/recipkg/zulip) | [Zulip 指定源码提交](https://github.com/zulip/zulip/tree/dd5adc2de6c43bd7bac7d1a0e6dc18c9364268a7) | [提取中](https://github.com/recipkg/zulip/blob/main/COVERAGE.md) |
+| 内容与知识 | [miniflux](https://github.com/recipkg/miniflux) | [Miniflux 指定源码提交](https://github.com/miniflux/v2/tree/3945f3daa0a90040f761d79a5f62a678fe86ba4e) | [提取中](https://github.com/recipkg/miniflux/blob/main/COVERAGE.md) |
+| 协作与办公 | [vikunja](https://github.com/recipkg/vikunja) | [Vikunja 指定源码提交](https://github.com/go-vikunja/vikunja/tree/e37ebc0d10db366ff111bc4bb74a696d7cfc912e) | [提取中](https://github.com/recipkg/vikunja/blob/main/COVERAGE.md) |
+| 文件与媒体 | [syncthing](https://github.com/recipkg/syncthing) | [Syncthing 指定源码提交](https://github.com/syncthing/syncthing/tree/ed38528d7fba3dd6a42c9c9fc6780af432dc15d2) | [提取中](https://github.com/recipkg/syncthing/blob/main/COVERAGE.md) |
+| Agent 应用 / 软件开发 | [openhands](https://github.com/recipkg/openhands) | [OpenHands Agent Canvas 指定源码提交](https://github.com/OpenHands/OpenHands/tree/17af119c331a87e881417e4afe95f83dd3c5cb2c) | [提取中](https://github.com/recipkg/openhands/blob/main/COVERAGE.md) |
+| Agent 框架 / 执行引擎 | [openhands-agent-sdk](https://github.com/recipkg/openhands-agent-sdk) | [OpenHands Software Agent SDK 指定源码提交](https://github.com/OpenHands/software-agent-sdk/tree/46b1fa5cb91ada17e6ec938c7e8624a4fa19fa98) | [提取中](https://github.com/recipkg/openhands-agent-sdk/blob/main/COVERAGE.md) |
+| Agent 框架 / 执行引擎 | [langgraph](https://github.com/recipkg/langgraph) | [LangGraph 1.2.18 固定源码提交](https://github.com/langchain-ai/langgraph/tree/3521f08e21a7d89c28331191374bc85c11ecb6e2) | [提取中](https://github.com/recipkg/langgraph/blob/main/COVERAGE.md) |
+| Agent 工作流平台 | [dify](https://github.com/recipkg/dify) | [Dify 1.18.0 固定源码提交](https://github.com/langgenius/dify/tree/50abea97062110044f15d0e03ccecadd9ccc87ca) | [提取中](https://github.com/recipkg/dify/blob/main/COVERAGE.md) |
+| 开发者工具 / Git 协作 | [gitea](https://github.com/recipkg/gitea) | [Gitea 指定源码提交](https://github.com/go-gitea/gitea/tree/02c03d69d35963e40f9662d4a793a55d78649444) | [提取中](https://github.com/recipkg/gitea/blob/main/COVERAGE.md) |
+| AI 聊天 / Agent 管理 | [librechat](https://github.com/recipkg/librechat) | [LibreChat 指定源码提交](https://github.com/LibreChat-AI/LibreChat/tree/8d3da9bbb220a0a96be9330a2e1cbd385fb786d5) | [提取中](https://github.com/recipkg/librechat/blob/main/COVERAGE.md) |
+| Agent 应用 / 个人助手 | [openclaw](https://github.com/recipkg/openclaw) | [OpenClaw 指定源码提交](https://github.com/openclaw/openclaw/tree/51420782b3810b4aa1230aa9621aec78f7dbbd3c) | [提取中](https://github.com/recipkg/openclaw/blob/main/COVERAGE.md) |
+| 设计方法 / 质量合同 | [design-foundations](https://github.com/recipkg/design-foundations) | Apple、Microsoft、Android、IBM、GOV.UK、W3C 官方指南，详见配方来源 | [首版可用](https://github.com/recipkg/design-foundations/blob/main/ACCEPTANCE.md) |
+| 设计方法 / 视觉方向 | [design-directions](https://github.com/recipkg/design-directions) | 基于产品任务、内容、平台与来源资料整理 | [首版可用](https://github.com/recipkg/design-directions/blob/main/ACCEPTANCE.md) |
+
+阶段链接直达各仓库的覆盖记录；设计合同链接到其验收说明。“首版可用”表示材料可复用，不表示某个产品已完整重建。
+
+```mermaid
+flowchart LR
+    S[固定版本的软件与来源] --> R[行为配方与重建提示词]
+    D[标准库设计与质量合同] --> R
+    R --> A[Agent 按完整依赖重建]
+    A --> V[运行行为验收]
+    V --> C[记录通过、失败与缺口]
+```
 
 配方存在或 `recipkg check` 通过，并不代表配方已完整，也不代表软件已根据配方重建。每个仓库须明确记录源码版本、许可、已观察内容、未知项、可复现验收和重建验证状态。
 
