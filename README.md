@@ -15,6 +15,7 @@
 | 分类 | Recipkg 配方 | 固定上游来源 | 阶段 |
 | --- | --- | --- | --- |
 | 命令行 / 多媒体 | [ffmpeg](https://github.com/recipkg/ffmpeg) | [FFmpeg 9.0.2](https://github.com/FFmpeg/FFmpeg/tree/n9.0.2) | [提取中](https://github.com/recipkg/ffmpeg/blob/main/COVERAGE.md) |
+| 命令行 / 多媒体下载 | [yt-dlp](https://github.com/recipkg/yt-dlp) | [yt-dlp 2026.10.26](https://github.com/yt-dlp/yt-dlp/tree/f264a6cbd1f630894da0f368df00f8aae50140e0) | [提取中](https://github.com/recipkg/yt-dlp/blob/main/COVERAGE.md) |
 | 命令行 / JSON 处理 | [jq](https://github.com/recipkg/jq) | [jq 1.8.2](https://github.com/jqlang/jq/tree/34f7186b86743a083a589741b6cea95293524108) | [提取中](https://github.com/recipkg/jq/blob/main/COVERAGE.md) |
 | 命令行 / 文本搜索 | [ripgrep](https://github.com/recipkg/ripgrep) | [ripgrep 15.2.0](https://github.com/BurntSushi/ripgrep/tree/e89fff89ac9af12e8d4ce9d5fd07beb408ca730f) | [提取中](https://github.com/recipkg/ripgrep/blob/main/COVERAGE.md) |
 | 基础能力 / 正则引擎 | [regex](https://github.com/recipkg/regex) | [rust-lang/regex 1.13.0](https://github.com/rust-lang/regex/tree/926af2e68eca3ce089815790541cf50759ba2c59) | [提取中](https://github.com/recipkg/regex/blob/main/COVERAGE.md) |
