@@ -38,6 +38,7 @@
 | AI 聊天 / Agent 管理 | [librechat](https://github.com/recipkg/librechat) | [LibreChat 指定源码提交](https://github.com/LibreChat-AI/LibreChat/tree/8d3da9bbb220a0a96be9330a2e1cbd385fb786d5) | [提取中](https://github.com/recipkg/librechat/blob/main/COVERAGE.md) |
 | AI 工作区 / 文档检索与 Agent | [anything-llm](https://github.com/recipkg/anything-llm) | [AnythingLLM v1.19.0](https://github.com/Mintplex-Labs/anything-llm/tree/9b1fcab141000eaba9f78ed131151de04904454b) | [提取中](https://github.com/recipkg/anything-llm/blob/main/COVERAGE.md) |
 | Agent 应用 / 个人助手 | [openclaw](https://github.com/recipkg/openclaw) | [OpenClaw 指定源码提交](https://github.com/openclaw/openclaw/tree/51420782b3810b4aa1230aa9621aec78f7dbbd3c) | [提取中](https://github.com/recipkg/openclaw/blob/main/COVERAGE.md) |
+| 模型运行 / 本地推理与服务 | [ollama](https://github.com/recipkg/ollama) | [Ollama v0.40.13](https://github.com/ollama/ollama/tree/04088e7c9d41cba5d33bafbf788d87a465c79d5b) | [提取中](https://github.com/recipkg/ollama/blob/main/COVERAGE.md) |
 | 设计方法 / 质量合同 | [design-foundations](https://github.com/recipkg/design-foundations) | Apple、Microsoft、Android、IBM、GOV.UK、W3C 官方指南，详见配方来源 | [首版可用](https://github.com/recipkg/design-foundations/blob/main/ACCEPTANCE.md) |
 | 设计方法 / 视觉方向 | [design-directions](https://github.com/recipkg/design-directions) | 基于产品任务、内容、平台与来源资料整理 | [首版可用](https://github.com/recipkg/design-directions/blob/main/ACCEPTANCE.md) |
 
