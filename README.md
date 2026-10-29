@@ -27,7 +27,7 @@
 | Agent 框架 / 执行引擎 | [openhands-agent-sdk](https://github.com/recipkg/openhands-agent-sdk) | [OpenHands Software Agent SDK 指定源码提交](https://github.com/OpenHands/software-agent-sdk/tree/46b1fa5cb91ada17e6ec938c7e8624a4fa19fa98) | **提取中**：实测本机会话、工具、模拟模型调用项目技能、认证失败后的会话恢复、服务端事件与重启及两种 WebSocket；事件查询中观察到模拟上游错误原文。远程协议、其他工具与安全行为尚未完整提取或重建。 |
 | 开发者工具 / Git 协作 | [gitea](https://github.com/recipkg/gitea) | [Gitea 指定源码提交](https://github.com/go-gitea/gitea/tree/02c03d69d35963e40f9662d4a793a55d78649444) | **提取中**：固定源码后端实测私有 Git 仓库、只读协作、议题权限、版本冲突与正常重启；前端、完整服务及独立重建尚未验收。 |
 | AI 聊天 / Agent 管理 | [librechat](https://github.com/recipkg/librechat) | [LibreChat 指定源码提交](https://github.com/LibreChat-AI/LibreChat/tree/8d3da9bbb220a0a96be9330a2e1cbd385fb786d5) | **提取中**：部分消息 API、Agent 管理认证与权限已对照源码；仅做语法检查，服务和重建未验收。 |
-| Agent 应用 / 个人助手 | [openclaw](https://github.com/recipkg/openclaw) | [OpenClaw 指定源码提交](https://github.com/openclaw/openclaw/tree/51420782b3810b4aa1230aa9621aec78f7dbbd3c) | **提取中**：已整理配对、技能与沙箱；不同提交的发布包通过模拟模型和正常重启样例，固定源码与重建未验收。 |
+| Agent 应用 / 个人助手 | [openclaw](https://github.com/recipkg/openclaw) | [OpenClaw 指定源码提交](https://github.com/openclaw/openclaw/tree/51420782b3810b4aa1230aa9621aec78f7dbbd3c) | **提取中**：已整理配对、技能与沙箱；固定源码在模拟模型下通过两轮对话与正常重启后的历史恢复样例；更短等待的一次运行超时，完整功能和独立重建未验收。 |
 | 设计方法 / 质量合同 | [design-foundations](https://github.com/recipkg/design-foundations) | Apple、Microsoft、Android、IBM、GOV.UK、W3C 官方指南，详见配方来源 | **首版可用**：归档与依赖交付已检查；具体产品须独立验收。 |
 | 设计方法 / 视觉方向 | [design-directions](https://github.com/recipkg/design-directions) | 基于产品任务、内容、平台与来源资料整理 | **首版可用**：包含阅读、工作台、服务、沉浸、品牌、原生、数据和 Agent 协作方向，递归依赖基础合同；具体界面仍须实际验收。 |
 
@@ -35,7 +35,7 @@
 
 ## 可重复对照测试
 
-[标准库黑盒样本测试](https://github.com/recipkg/standard-library-verification)提供 regex、jq、ripgrep、FFmpeg、Valkey、Miniflux、Vikunja、Syncthing、Gitea、OpenHands Agent SDK 和 OpenClaw 的样本与可执行断言，可指定上游或重建程序路径。Valkey 使用发行版构建，OpenClaw 使用不同于固定源码的发布包。测试仓库不属于配方归档；仅检查已有的少量样本，跳过、通过或归档检查都不代表软件已完整重建。每份配方的 `COVERAGE.md` 是覆盖状态依据。
+[标准库黑盒样本测试](https://github.com/recipkg/standard-library-verification)提供 regex、jq、ripgrep、FFmpeg、Valkey、Miniflux、Vikunja、Syncthing、Gitea、OpenHands Agent SDK 和 OpenClaw 的样本与可执行断言，可指定上游或重建程序路径。Valkey 使用发行版构建；OpenClaw 分别对照固定源码和不同提交的发布包，详见配方覆盖记录。测试仓库不属于配方归档；仅检查已有的少量样本，跳过、通过或归档检查都不代表软件已完整重建。每份配方的 `COVERAGE.md` 是覆盖状态依据。
 
 ## 首批分类与候选来源
 
